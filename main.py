@@ -3,7 +3,6 @@
 #System Resource Monitor
 
 import psutil
-import time
 import tkinter as tk
 
 # Set resource thresholds
@@ -53,7 +52,7 @@ def update_gui():
     alert_label.config(text=alert_text)
 
     # Schedule the function to run again after a delay
-    root.after(2000, update_gui)  # 2000 ms = 2 seconds (adjust the delay as needed)
+    root.after(200, update_gui)  # 200 ms = .20 seconds (Adjust as needed)
 
 
 # Start the resource monitoring and GUI update function
@@ -61,6 +60,3 @@ update_gui()
 
 # Run the GUI application
 root.mainloop()
-
-
-
